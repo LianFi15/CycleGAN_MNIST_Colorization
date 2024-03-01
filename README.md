@@ -16,19 +16,22 @@ In this task, the goal was to create a CycleGAN. I designed Generators and Discr
 
 The training process consists of four stages. In the first stage, Discriminator1 is trained while Generator21 is "locked." In the second stage, Generator21 is trained while Discriminator1 is "locked". Stages 3 and 4 consider only Discriminator2 and Generator12. At each training stage for the Discriminator, the loss is the sum of the fake loss (from the Discriminator's evaluation on completely fake images) and the real loss (from images where "everything is correct"). This approach effectively trains the Discriminator to provide the desired results.
 
-Two MNIST datasets were created, each colored differently for different digits.
+Two MNIST datasets were created, each colored differently for different digits:
 
+MNIST1:
 
+![](images/mnist1.png)
 
-### The Dataset
-MNIST, a prevalent dataset for machine learning, features 28x28 grayscale images of handwritten digits (0-9), serving as a benchmark for classification algorithms. In this project, we leverage the power of GANs to enhance MNIST by introducing colorization. Each digit is assigned a predetermined color, transforming the grayscale images into vibrant and visually distinctive representations. This innovative approach extends the utility of MNIST, showcasing the capabilities of CycleGANs in generating diverse and colorful variations of the dataset.
+MNIST2:
 
-![](images/mnist_colored.png)
+![](images/mnist2.png)
+
 
 ## Results
 
 The results are presented as follows: the right column represents the generated images, depicting digits colored to match the second dataset, while the left column represents the authentic color of each digit.
 
+![](images/results.png)
 
 Observations:
 - Epoch 0: The model hasn't learned sufficiently, and the obtained colors are unclear.
